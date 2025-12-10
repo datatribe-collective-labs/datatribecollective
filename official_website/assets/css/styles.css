@@ -258,10 +258,50 @@ header {
     padding: var(--space-section) 0;
 }
 
-.social-media-inner img {
-    display: block;
+/* ===================== */
+/* SOCIAL MEDIA BAR      */
+/* ===================== */
+
+/* SOCIAL MEDIA BAR */
+.social-media-bar {
+    padding: var(--space-section) 0;
+}
+
+.social-media-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.social-media-item img {
+    width: 120px;   /* adjust if needed */
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.social-media-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #043D40;
+    margin-top: 4px;
+}
+
+/*Responsive*/
+
+@media (max-width: 700px) {
+    .social-media-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 450px) {
+    .social-media-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===================== */
